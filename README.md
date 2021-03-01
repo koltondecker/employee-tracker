@@ -1,2 +1,0 @@
-# employee-tracker
-Employee Tracker
