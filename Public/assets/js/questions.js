@@ -1,7 +1,9 @@
 const inquire = require('inquirer');
+const cTable = require('console.table');
+const mysql = require('mysql');
+const db = require('./db');
 
-const mainMenu = (mysqlConnection) => {
-    const connection = mysqlConnection;
+const mainMenu = () => {
 
     inquire.prompt([
         {
@@ -55,8 +57,18 @@ const mainMenu = (mysqlConnection) => {
 
 const allEmployees = () => {
 
+    db.query(
+        // "SELECT * FROM employee, role, department WHERE employee.role_id = role.id AND role.department_id = department.id",
+        'SELECT * FROM employee', 
+        (err, res) => {
 
+            if (err) throw err;
 
+            console.table([res]);
+
+            mainMenu();
+        }
+    );
 };
 
 const allEmployeesByDepartment = () => {
@@ -95,4 +107,4 @@ const updateEmployeeManager = () => {
 
 };
 
-exports.mainMenu = mainMenu;
+module.exports = mainMenu();
