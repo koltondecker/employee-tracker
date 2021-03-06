@@ -6,7 +6,7 @@ USE employeesDB;
 
 CREATE TABLE department (
     id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(30) NULL,
+    department VARCHAR(30) NULL,
     PRIMARY KEY (id)
 );
 
@@ -32,3 +32,12 @@ VALUES ("mike", "jones", 1);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("jake", "paul", 2, 1);
+
+INSERT INTO role (title, salary, department_id)
+VALUES ("Manager", 75000, 1);
+
+INSERT INTO department (department)
+VALUES ("Finance");
+
+INSERT INTO role (title, salary, department_id)
+VALUES ("Accountant", 50000, 1);
