@@ -1,16 +1,14 @@
 const inquire = require('inquirer');
 const cTable = require('console.table');
 const mysql = require('mysql');
+require('dotenv').config();
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-
-    port: 3306,
-
-    user: 'root',
-
-    password: 'Donutboy123!',
-    database: 'employeesDB'
+    host: process.env.host,
+    user: process.env.user,
+    port: process.env.port,
+    password: process.env.password,
+    database: process.env.database
 });
 
 const mainMenu = () => {
