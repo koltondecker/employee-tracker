@@ -213,7 +213,22 @@ const addRole = () => {
 
 const addDepartment = () => {
 
+    inquire.prompt([
+        {
+            type: "input",
+            name: "departmentName",
+            message: "What is the name of the new department?"
+        }
+    ]).then((answer) => {
 
+        connection.query(
+            `INSERT INTO department (department)
+            VALUES (${JSON.stringify(answer.departmentName)})`
+        );
+
+        mainMenu();
+
+    });
 
 };
 
