@@ -25,6 +25,8 @@ const mainMenu = () => {
                 "View All Employees by Department",
                 "View All Employees by Manager",
                 "Add Employee",
+                "Add Role",
+                "Add Department",
                 "Remove Employee",
                 "Update Employee Role",
                 "Update Employee Manager",
@@ -45,6 +47,12 @@ const mainMenu = () => {
                 break;
             case "Add Employee":
                 addEmployee();
+                break;
+            case "Add Role":
+                addRole();
+                break;
+            case "Add Department":
+                addDepartment();
                 break;
             case "Remove Employee":
                 removeEmployee();
@@ -170,6 +178,42 @@ const addEmployee = () => {
         mainMenu();
 
     });
+
+};
+
+const addRole = () => {
+
+    inquire.prompt([
+        {
+            type: "input",
+            name: "title",
+            message: "What is the role title?"
+        },
+        {
+            type: "input",
+            name: "salary",
+            message: "What is the salary for this role?"
+        },
+        {
+            type: "input",
+            name: "department_id",
+            message: "What is the department id?"
+        }
+    ]).then((answers) => {
+
+        connection.query(
+            `INSERT INTO role (title, salary, department_id)
+            VALUES (${JSON.stringify(answers.title)}, ${JSON.stringify(answers.salary)}, ${JSON.stringify(answers.department_id)})`
+        );
+
+        mainMenu();
+
+    });
+};
+
+const addDepartment = () => {
+
+
 
 };
 
