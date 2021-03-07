@@ -6,7 +6,18 @@ const index = require('../../../index');
 
 const allDepartments = () => {
 
+    connection.query(
+        `SELECT * FROM department`,
+        (err, res) => {
+            
+            if (err) throw err;
 
+            console.table(res);
+
+            index.mainMenu();
+
+        }
+    )
 
 };
 
