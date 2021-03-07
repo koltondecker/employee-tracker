@@ -1,4 +1,5 @@
 const inquire = require('inquirer');
+const connection = require('./Public/assets/js/db');
 const addEmployeeFunction = require('./Public/assets/js/addEmployee');
 const addRoleFunction = require('./Public/assets/js/addRole');
 const addDepartmentFunction = require('./Public/assets/js/addDepartment');
