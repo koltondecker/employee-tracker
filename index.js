@@ -13,7 +13,7 @@ const updateEmployeeManagerFunction = require('./Public/assets/js/updateEmployee
 const removeEmployeeFunction = require('./Public/assets/js/removeEmployee');
 const removeRoleFunction = require('./Public/assets/js/removeRole');
 const removeDepartmentFunction = require('./Public/assets/js/removeDepartment');
-
+const totalDepartmentBudgetFunction = require('./Public/assets/js/totalDepartmentBudget');
 
 function mainMenu() {
 
@@ -36,6 +36,7 @@ function mainMenu() {
                 "Remove Employee",
                 "Remove Role",
                 "Remove Department",
+                "View Total Utilized Budget by Department",
                 "EXIT"
             ]
         }
@@ -80,6 +81,9 @@ function mainMenu() {
                 break;
             case "Remove Department":
                 removeDepartmentFunction.removeDepartment();
+                break;
+            case "View Total Utilized Budget by Department":
+                totalDepartmentBudgetFunction.totalDepartmentBudget();
                 break;
             case "EXIT":
                 connection.end();
