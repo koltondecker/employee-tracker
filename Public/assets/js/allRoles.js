@@ -6,7 +6,18 @@ const index = require('../../../index');
 
 const allRoles = () => {
 
+    connection.query(
+        `SELECT id, title, salary FROM role`,
+        (err, res) => {
 
+            if(err) throw err;
+
+            console.table(res);
+
+            index.mainMenu();
+
+        }
+    )
 
 };
 

@@ -18,7 +18,6 @@ const allDepartments = () => {
 
         }
     )
-
 };
 
 module.exports.allDepartments = allDepartments;
