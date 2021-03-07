@@ -1,22 +1,20 @@
 const mysql = require('mysql');
+const util = require('util');
+require('dotenv').config();
 
-function connectDB() {
+const connection = mysql.createConnection({
+    host: process.env.host,
+    user: process.env.user,
+    port: process.env.port,
+    password: process.env.password,
+    database: process.env.database
+});
 
-    const connection = mysql.createConnection({
-        host: 'localhost',
-    
-        port: 3306,
-    
-        user: 'root',
-    
-        password: 'Donutboy123!',
-        database: 'employeesDB'
-    });
+connection.query = util.promisify(connection.query);
 
-    connection.connect((err) => {
-        if (err) throw err;
-        console.log(`connected as id ${connection.threadId}\n`);
-    });
-}
+connection.connect((err) => {
+    if (err) throw err;
+    console.log(`connected as id ${connection.threadId}\n`);
+});
 
-module.exports = connectDB();
+module.exports = connection;
