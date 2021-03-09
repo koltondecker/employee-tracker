@@ -27,8 +27,6 @@ const allEmployeesByDepartment = () => {
                     }
                 }
             ]).then( (answer) => {
-        
-                console.log(answer);
 
                 connection.query(
                     `SELECT e.id, e.first_name, e.last_name, r.title, d.department, r.salary

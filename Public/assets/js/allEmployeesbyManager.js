@@ -40,8 +40,6 @@ const allEmployeesByManager = () => {
                 AND last_name = ${JSON.stringify(nameArray[1])}`,
                 (err, selectedManagerID) => {
 
-                    console.log(selectedManagerID[0].id);
-
                     if (err) throw err;
 
                     connection.query(

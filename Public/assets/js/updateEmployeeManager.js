@@ -32,8 +32,6 @@ const updateEmployeeManager = () => {
                     message: "What is the new manager id?"
                 }
             ]).then( (answers) => {
-        
-                console.log(answers);
 
                 const updateEmployeeRole = answers.employee.split(' ');
                 const updateEmployeeRoleFirstName = JSON.stringify(updateEmployeeRole[0]);
