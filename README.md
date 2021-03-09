@@ -69,7 +69,7 @@ No license was used for this project.
 <hr>
 
 ### Questions: 
-If you would like to learn more, please take a look through my github below:
-<a href="https://github.com/koltondecker"><img src="./public/assets/images/github-brands.svg" height="40px" width="auto" alt="github icon"> </a>Visit my GitHub at <a href="https://github.com/koltondecker">github.com/koltondecker</a>
-If you still have questions, please send me an email and I will respond as soon as I can:
-<a href="mailto:deckerman25@gmail.com">deckerman25@gmail.com</a>
+<p>If you would like to learn more, please take a look through my github below:</p>
+<p><a href="https://github.com/koltondecker"><img src="./public/assets/images/github-brands.svg" height="40px" width="auto" alt="github icon"> </a>Visit my GitHub at <a href="https://github.com/koltondecker">github.com/koltondecker</a></p>
+<p>If you still have questions, please send me an email and I will respond as soon as I can:</p>
+<p><a href="mailto:deckerman25@gmail.com">deckerman25@gmail.com</a></p>
